@@ -69,12 +69,12 @@ class AtombergDevice:
     @property
     def supports_brightness_control(self):
         """Check whether device supports brightness control."""
-        return self.series in SUPPORTED_BRIGHTNESS_CONTROL_SERIES
+        return self._series in SUPPORTED_BRIGHTNESS_CONTROL_SERIES
 
     @property
     def supports_color_effect(self):
         """Check whether device supports color modes."""
-        return self.series in SUPPORTED_COLOR_EFFECT_SERIES
+        return self._series in SUPPORTED_COLOR_EFFECT_SERIES
 
     @property
     def state(self) -> dict[str, Any]:
